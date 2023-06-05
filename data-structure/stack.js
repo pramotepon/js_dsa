@@ -33,9 +33,7 @@ class Stack {
         this.length--;
         return temp;
     }
-    
 }
-
 let myStack = new Stack(3);
 myStack.push(2)
 myStack.push(1)
