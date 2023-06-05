@@ -1,10 +1,11 @@
+// Create Node for stack
 class Node {
     constructor(value) {
         this.value = value;
         this.next = null;
     }
 }
-
+// Create class stack
 class Stack {
     constructor(value){
         const newNode = new Node(value)
