@@ -79,6 +79,15 @@ class LinkedList {
         }
         return temp;
     }
+    // Edit value an link list by index
+    set(index, value) {
+        let temp = this.get(index);
+        if (temp) {
+            temp.value = value
+            return true;
+        }
+        return false;
+    }
 }
 
 let myLinkedList = new LinkedList(1);
@@ -88,5 +97,6 @@ myLinkedList.push(3);
 // myLinkedList.pop();
 // myLinkedList.unshif(4)
 // myLinkedList.shift();
-console.log(myLinkedList.get(1));
+// console.log(myLinkedList.set(1, 9));
+// console.log(myLinkedList.get(1));
 // console.log(myLinkedList);
