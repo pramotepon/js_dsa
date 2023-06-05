@@ -24,8 +24,20 @@ class Stack {
         this.length++;
         return this;
     }
+    // Remove node top stack
+    pop() {
+        if (this.length === 0) return undefined;
+        let temp = this.top;
+        this.top = this.top.next;
+        temp.next = null;
+        this.length--;
+        return temp;
+    }
+    
 }
 
-let myStack = new Stack(2);
-// console.log(myStack.push(3));
+let myStack = new Stack(3);
+myStack.push(2)
+myStack.push(1)
+myStack.pop();
 console.log(myStack);
