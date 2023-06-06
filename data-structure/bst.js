@@ -51,6 +51,13 @@ class BinarySearchTree {
         }
         return false;
     }
+    // Minimum value
+    minimumNode(currentNode) {
+        while (currentNode.left != null) {
+            currentNode = currentNode.left;
+        }
+        return currentNode;
+    }
 }
 let myBST = new BinarySearchTree();
 myBST.insert(47);
@@ -61,4 +68,5 @@ myBST.insert(27);
 myBST.insert(52);
 myBST.insert(82);
 // console.log(myBST.contains(52));
-console.log(myBST);
+console.log(myBST.minimumNode(myBST.root));
+// console.log(myBST);
