@@ -35,10 +35,30 @@ class BinarySearchTree {
             }
         }
     }
+    // Search
+    contains(value) {
+        if (this.root === null) return false;
+        let temp = this.root;
+
+        while (temp) {
+            if (value < temp.value) {
+                temp = temp.left;
+            } else if (value > temp.value) {
+                temp = temp.right;
+            } else {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 let myBST = new BinarySearchTree();
-myBST.insert(57);
+myBST.insert(47);
 myBST.insert(21);
 myBST.insert(76);
-
+myBST.insert(18);
+myBST.insert(27);
+myBST.insert(52);
+myBST.insert(82);
+// console.log(myBST.contains(52));
 console.log(myBST);
