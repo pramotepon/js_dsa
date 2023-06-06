@@ -33,5 +33,9 @@ class Graph {
 let myGraph = new Graph();
 myGraph.addVertext("A");
 myGraph.addVertext("B");
+myGraph.addVertext("C");
 myGraph.addEdge("A", "B");
+myGraph.addEdge("B", "C");
+myGraph.addEdge("C", "A");
+myGraph.removeEdge("A", "B");
 console.log(myGraph);
